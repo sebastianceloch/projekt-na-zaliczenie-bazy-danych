@@ -1,0 +1,27 @@
+Projekt to baza danych stacjonarnego sklepu komputerowego, który ma również opcję wysyłki sprzętu.
+Przechowuje dane dotyczące pracowników sklepu, zarobków pracowników, do jakiego wydziału należą, produktów jakie są w sklepie i informacje o zamówieniach.
+Kwerendy w bazie danych pokazują szczegółowe informacje przy pomocy łączenia tabel,funkcji agregujących i podzapytań na temat pracowników sklepu, produktów i zamówień w sklepie.
+Wyzwalacze ułatwiają prace w bazie danych przy edycji tabeli zamówienie, funkcja zawarta w bazie pokazuje ilość zamówień z miesiąca co jest przydatne dla pracowników sklepu, a procedura obniża ceny produktów, które znajdują się w tabeli produkty.
+Baza danych ma za zadanie:
+-Pokazać i zapisywać produkty znajdujące się w sklepie (tabela produkty)
+-zachowywać dane dotyczące wysyłki produktów(tabela zamowienia)
+-zapisywać dane dotyczące pracowników sklepu, ich zarobków i wydziału do którego należą (tabele pracownicy,wydzial,zarobki).
+
+Opis kwerend:
+1: Wyświetlenie imienia i nazwiska pracownika, pokazanie premii i wynagrodzenia całkowitego (łączenie tabel)
+2:Wyświetlenie pracownika i jego wydziału (łączenie tabel)
+3:Wyświetlenie średniego wynagrodzenia dla danego wydziału (funkcje agregujące)
+4:Wyświetlenie produktów do wysyłki, suma ceny produktu i wysyłki produktu (łączenie tabel)
+5:Wyświetlenie imienia i nazwiska pracownika który ma największe wynagrodzenie w danym wydziale
+6:Policzenie liczby pracowników w wydziale(funkcje agregujące)
+7:Wyświetlenie produktu do wysyłki wraz z imieniem i nazwiskiem dostawcy, które zostały wysłane w grudniu 2020 roku(łączenie tabel)
+8:Wyświetlenie pracowników, którzy mają wieksze wynagrodzenie niż średnie wynagrodzenie (podzapytanie,łączenie tabel,funkcje agregujące)
+9:Wyświetlenie produktów, które mają większą cene od średniej ceny produktów(podzapytanie,funkcje agregujące)
+10:Wyświetlenie pracowników, którzy urodzili się pomiedzy 1990 rokiem, a 2000(podzapytanie)
+Opis funkcji:
+pokazanie ilości zamówień w danym miesiącu w zależności od parametru (wpisujemy, który miesiąc)
+Opis procedury:
+Podajemy id_produktu i zmienia jego cene
+Opis wyzwalaczy:
+1: Podczas wstawiania danych do tabeli zamówienia ustawia podstawową wartość daty wysyłki na dzisiejszą date
+2:Podczas wstawiania danych do tabeli zamówienia sprawdza, czy rok jest poprawny nie mniejszy niż 2020
